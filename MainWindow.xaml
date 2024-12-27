@@ -1,0 +1,64 @@
+﻿<Window x:Class="Comp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Comp"
+        mc:Ignorable="d"
+                     Title="Покупка ПК с учетом сборки" Height="500" Width="300">
+    <Grid Margin="10">
+        <StackPanel>
+            <Label Content="Операционная система:"/>
+            <ComboBox x:Name="OSComboBox">
+                <ComboBoxItem Content="Windows (7000 рублей)" Tag="7000"/>
+                <ComboBoxItem Content="Linux (2000 рублей)" Tag="2000"/>
+            </ComboBox>
+
+            <Label Content="Процессор:"/>
+            <ComboBox x:Name="CPUComboBox">
+                <ComboBoxItem Content="AMD (5000 рублей)" Tag="5000"/>
+                <ComboBoxItem Content="Intel (10000 рублей)" Tag="10000"/>
+            </ComboBox>
+
+            <Label Content="Материнская плата:"/>
+            <ComboBox x:Name="MotherboardComboBox">
+                <ComboBoxItem Content="Gigabyte (2000 рублей)" Tag="2000"/>
+                <ComboBoxItem Content="ASRock (1500 рублей)" Tag="1500"/>
+            </ComboBox>
+
+            <Label Content="Антивирус:"/>
+            <ComboBox x:Name="AntivirusComboBox">
+                <ComboBoxItem Content="Kaspersky (3000 рублей)" Tag="3000"/>
+                <ComboBoxItem Content="Spider Web (1500 рублей)" Tag="1500"/>
+                <ComboBoxItem Content="360 Total Security (5000 рублей)" Tag="5000"/>
+            </ComboBox>
+
+            <Label Content="Блок питания:"/>
+            <ComboBox x:Name="PowerSupplyComboBox">
+                <ComboBoxItem Content="60% (500 рублей)" Tag="500"/>
+                <ComboBoxItem Content="70% (1000 рублей)" Tag="1000"/>
+                <ComboBoxItem Content="80% (1500 рублей)" Tag="1500"/>
+                <ComboBoxItem Content="90% (2000 рублей)" Tag="2000"/>
+            </ComboBox>
+
+            <Label Content="Оперативная память:"/>
+            <ComboBox x:Name="RAMComboBox">
+                <ComboBoxItem Content="0,5 Gb (500 рублей)" Tag="500"/>
+                <ComboBoxItem Content="1,5 Gb (1500 рублей)" Tag="1500"/>
+                <ComboBoxItem Content="2 Gb (4000 рублей)" Tag="4000"/>
+                <ComboBoxItem Content="4 Gb (8000 рублей)" Tag="8000"/>
+            </ComboBox>
+
+            <Label Content="Дополнительные модули:"/>
+            <StackPanel>
+                <CheckBox x:Name="BluetoothCheckBox" Content="Bluetooth (500 рублей)" Tag="500"/>
+                <CheckBox x:Name="EthernetCheckBox" Content="Ethernet (250 рублей)" Tag="250"/>
+                <CheckBox x:Name="SoundCardCheckBox" Content="Звуковая карта (1500 рублей)" Tag="1500"/>
+                <CheckBox x:Name="CDDriveCheckBox" Content="CD привод (1000 рублей)" Tag="1000"/>
+            </StackPanel>
+
+            <Button Content="Рассчитать итог" Click="CalculateButton_Click" Margin="0,10,0,0"/>
+            <TextBlock x:Name="ResultTextBlock" FontWeight="Bold" Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
